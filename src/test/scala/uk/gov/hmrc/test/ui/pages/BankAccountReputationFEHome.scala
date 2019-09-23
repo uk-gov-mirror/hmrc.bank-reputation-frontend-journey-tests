@@ -15,20 +15,15 @@
  */
 package uk.gov.hmrc.test.ui.pages
 
-import org.openqa.selenium.WebDriver
 import uk.gov.hmrc.test.ui.conf.TestConfiguration
 
-object ExamplePage extends BasePage {
+object BankAccountReputationFEHome extends BasePage {
 
-  val url: String = TestConfiguration.url("auth-login-stub") + "/gg-sign-in"
-  val title = "Authority Wizard"
+  val url: String = TestConfiguration.url("bank-account-reputation-frontend")
+  val title = "Welcome To Bank Account Reputation Service"
 
-  def login(redirectionUrl: String)(implicit driver: WebDriver): Unit = {
-    textField("redirectionUrl").value = redirectionUrl
-    singleSel("confidenceLevel").value = "100"
-    singleSel("affinityGroup").value = "Individual"
-    textField("nino").value = "MA000003A"
-    click on CssSelectorQuery(".button")
-  }
+  val validateBankDetails = linkText("Validate Bank Details")
+  val bankMetadataLookup = linkText("Bank Metada (Sort Code) Lookup")
+  val modCheck = linkText("Mod Check")
 }
 

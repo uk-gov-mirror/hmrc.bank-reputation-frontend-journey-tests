@@ -1,4 +1,4 @@
-package uk.gov.hmrc.test.ui.spec
+package uk.gov.hmrc.test.ui.specs
 
 import org.scalatest.concurrent.Eventually
 import org.scalatestplus.selenium.WebBrowser
